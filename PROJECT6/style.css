@@ -1,0 +1,65 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+body{
+    background-color:#7adfff;
+}
+.container{
+    max-width:1200px;
+    min-height:800px;
+    margin:52px auto;
+    padding:0 16px;
+}
+.grid{
+    display:grid;
+    gap:35px;
+    grid-template-areas:"K1 K1 K1  K3 " 
+    " K2 K2  K2 K3"
+    "K2 K2 K2  K3" ;
+}
+.box1{
+   grid-area:K1;
+   background-color:#4F8EEC;
+}
+.box2{
+   grid-area:K2;
+   background-color:#01ae3c;
+}
+.box3{
+    grid-area:K3;
+    background-color:#005c79;
+
+}
+@media screen and (width>1200px){
+
+}
+@media screen and(width<1200px) and (width>450px){
+.grid{
+    gap:16px;
+    grid-template-areas:"K1 K1 K3"
+                    "K2 K2  K3"
+                    "K2 K2 K3"
+                    " K2 K2  K3"
+                    ;
+}
+}
+@media screen and (width < 450px){
+   .container{
+    margin:32px auto;
+   }
+    .grid{
+        display:grid;
+        grid-template-areas:"K1" 
+        " K2"
+        "K2" 
+        "K2" 
+        "K2"
+        "K3"
+         "K3"
+         "K3"   ;      
+        gap:16px;
+    }
+
+}
